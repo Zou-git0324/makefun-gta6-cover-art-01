@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body { margin: 0; min-height: 100%; background: #17101f; color: #f4eef7; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 16px; width: 320px; flex: none; }
+.controls h1 { margin: 0; font-family: 'Anton', sans-serif; font-size: 34px; letter-spacing: 1px; color: #ffb347; }
+.controls > p { margin: 0; color: #c9b8d4; }
+fieldset { border: 1px solid #4a3560; border-radius: 10px; padding: 12px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+legend { font-weight: 700; color: #ffb347; padding: 0 6px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 13px; }
+input[type=text], select { font: inherit; padding: 8px; border: 1px solid #6b5280; border-radius: 6px; background: #241533; color: #fff; }
+input[type=range] { width: 100%; accent-color: #ff2e88; }
+button { font: inherit; font-weight: 700; padding: 8px 12px; border: 1px solid #6b5280; border-radius: 6px; background: #2c1c40; color: #f4eef7; cursor: pointer; }
+button:hover { border-color: #ff2e88; }
+button.active { background: #ff2e88; border-color: #ff2e88; color: #fff; }
+button.primary { background: linear-gradient(90deg, #ff7a3d, #ff2e88, #7b2ff7); border: 0; color: #fff; padding: 12px; font-size: 16px; }
+#status { margin: 0; color: #9fe8c0; min-height: 1.2em; }
+.fine { font-size: 12px; color: #8d7a9e; }
+canvas { width: min(62vh, 52vw); height: auto; max-height: 92vh; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55); border-radius: 4px; }
+body.shot-cover { background: #120a1c; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover canvas { width: 100vw; height: 100vh; max-height: none; box-shadow: none; border-radius: 0; object-fit: contain; }
